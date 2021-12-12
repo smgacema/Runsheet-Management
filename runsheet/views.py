@@ -623,7 +623,7 @@ def employee_view_schedule_view(request):
     taskid=[]
     for a in schedules:
         taskid.append(a.taskId)
-    tasks=models.Task.objects.all().filter(status=True,user_id__in=taskid)
+    tasks=models.Task.objects.all().filter(status=True,id__in=taskid)
     schedules=zip(schedules,tasks)
     return render(request,'runsheet/employee_view_schedule.html',{'schedules':schedules,'employee':employee})
 
@@ -637,7 +637,7 @@ def employee_delete_schedule_view(request):
     taskid=[]
     for a in schedules:
         taskid.append(a.taskId)
-    tasks=models.Task.objects.all().filter(status=True,user_id__in=taskid)
+    tasks=models.Task.objects.all().filter(status=True,id__in=taskid)
     schedules=zip(schedules,tasks)
     return render(request,'runsheet/employee_delete_schedule.html',{'schedules':schedules,'employee':employee})
 
