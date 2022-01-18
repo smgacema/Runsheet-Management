@@ -88,11 +88,8 @@
     }
 
 
-
-
-
     body {
-
+      background-color: #EEF2F6 !important;
       padding-left: 240px;
     }
     main {
@@ -101,7 +98,7 @@
     }
 
     .menu {
-      background: #5bc995;
+      background: #0956CA;
       height: 100vh;
       width: 240px;
       position: fixed;
@@ -119,12 +116,17 @@
       width: 100px;
       border-radius: 50%;
       overflow: hidden;
-      border: 4px solid #ffea92;
+      background: #fff;
+      border: 4px solid #fff;
       box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
     }
     .menu .avatar h2 {
       font-weight: normal;
       margin-bottom: 0;
+      color: #fff;
+    }
+    .menu h6 {
+      color: #fff;
     }
     .menu ul {
       list-style: none;
@@ -132,7 +134,7 @@
       margin: 0;
     }
     .menu ul li {
-      padding: 0.5em 1em 0.5em 3em;
+      padding: 1em 1em 1em 3em;
       font-size: 0.95em;
       font-weight: regular;
       background-repeat: no-repeat;
@@ -155,10 +157,16 @@
     }
 
     .menu ul li:hover {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(63, 134, 240, 1);
     }
     .menu ul li:focus {
       outline: none;
+    }
+    .panel-heading {
+      background-color: #3F86F0 !important;
+    }
+    .label {
+      background: #3F86F0 !important;
     }
     @media screen and (max-width: 900px) and (min-width: 400px) {
       body {
@@ -299,7 +307,7 @@
 
     <!-- nav start -->
     <div class="bs-example">
-      <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background:#337AB7;">
+      <nav class="navbar navbar-expand-md  navbar-dark fixed-top" style="background:#0956CA;">
         <a href="/admin-dashboard" class="navbar-brand">Runsheet</a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
@@ -307,7 +315,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav" style=" margin-left: 90%;">
 
-            <a href="/logout" class="nav-item nav-link">Logout</a>
+            <a href="/logout" class="nav-item nav-link" style="color:#fff;">Logout</a>
           </div>
         </div>
       </nav>
