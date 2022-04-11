@@ -477,7 +477,8 @@ def admin_schedule_view(request):
 @user_passes_test(is_admin)
 def admin_view_schedule_view(request):
     schedules=models.Schedule.objects.all().filter(status=True)
-    return render(request,'runsheet/admin_view_schedule.html',{'schedules':schedules})
+    tasks = models.Task.objects.all()
+    return render(request,'runsheet/admin_view_schedule.html',{'schedules':schedules, 'tasks':tasks})
 
 
 
@@ -508,8 +509,9 @@ def admin_add_schedule_view(request):
 @user_passes_test(is_admin)
 def admin_approve_schedule_view(request):
     #those whose approval are needed
-    schedules=models.Schedule.objects.all().filter(status=False)
-    return render(request,'runsheet/admin_approve_schedule.html',{'schedules':schedules})
+    schedules=models.Schedule.objects.all().filter(status=True)
+    tasks = models.Task.objects.all()
+    return render(request,'runsheet/admin_approve_schedule.html',{'schedules':schedules,'tasks':tasks})
 
 
 

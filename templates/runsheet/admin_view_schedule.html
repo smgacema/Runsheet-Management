@@ -38,9 +38,14 @@
         </tr>
       </thead>
       {% for a in schedules %}
+      
       <tr>
         <td> {{a.employeeName}}</td>
-        <td>{{a.taskTitle}}</td>
+        <td>{% for b in tasks %}
+        {% if b.id == a.taskId%}
+        {{b.taskTitle}}
+        {% endif  %}
+        {% endfor %}</td>
         <td>{{a.scheduleStart}}</td>
         <td>{{a.scheduleFinish}}</td>
         <td>{{a.scheduleInfo}}</td>

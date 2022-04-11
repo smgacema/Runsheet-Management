@@ -41,6 +41,13 @@ class Schedule(models.Model):
     scheduleInfo=models.TextField(max_length=500)
     status=models.BooleanField(default=False)
 
+    
+    def employeeName(self):
+        emp = Employee.objects.get(id=self.employeeId)
+        name = emp.mobile
+        return "test"+name
+        return Employee.get_name(emp)
+
 
 
 class TaskCompleteDetails(models.Model):
