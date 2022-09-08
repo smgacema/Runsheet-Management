@@ -1,6 +1,6 @@
 # Run Sheet Management
  
-A Django Web app that assigns and schedules tasks to bank employees.
+A Django Web App that assigns and schedules tasks to company employees.
 
 ## Screenshots
 
